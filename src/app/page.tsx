@@ -1,103 +1,75 @@
-import Image from "next/image";
+'use client';
+
+import Link from 'next/link';
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+  return (
+    <div>
+
+      <div className="min-h-screen bg-white text-gray-800">
+        {/* ヒーロー */}
+        <section className="bg-gray-100 py-20 text-center">
+          <div className='mb-4'>
+            <h1 className="text-4xl font-bold ">💀CursEnglish💀</h1>
+            <div className='-mt-1'>
+              <small className='text-gray-500'>Cursed×English</small>
+            </div>
+          </div>
+          <p className="text-lg mx-auto">
+            海外の終わってるコピペで、英語が読めるようになるサービス。
+          </p>
+
+          {/* CTA */}
+          <Link href="/copypasta" className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            コピペ一覧
+          </Link>
+        </section>
+
+        {/* 特徴 */}
+        <section className="max-w-4xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <h2 className="text-xl font-semibold mb-2">英語原文＆日本語訳</h2>
+            <p>1行ごとに日本語ルビが振ってあるので読みやすい😬</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold mb-2">単語・スラング解説</h2>
+            <p>FワードやSワードだけ煽りを身に着けよう🤏🏻</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold mb-2">らくらく投稿卍</h2>
+            <p>気に入ったコピペを自分でも投稿できるよ♪</p>
+          </div>
+        </section>
+
+        <section className='text-center py-16'>
+          <p>過激な表現がありますので、利用規約をご一読ください。</p>
+          <Link href={"/terms"} className='bg-blue-500 p-4 rounded-lg mt-2 inline-block'>
+            利用規約を読む
+          </Link>
+        </section>
+
+        <section className='flex justify-center'>
+          <div>
+
+            <div className='w-2xl bg-gray-100 h-fit text-center py-2 '>
+              <h2 className='text-xl font-semibold my-2'>おすすめサイト</h2>
+              <a href="https://www.4chan.org/" className='text-blue-500  hover:text-blue-800  '>4Chan(すべての元凶)</a><br />
+              <a href="https://knowyourmeme.com/" className='text-blue-500  hover:text-blue-800  '>Know Your Meme</a><br />
+              <a href="https://www.reddit.com/r/memes/" className='text-blue-500  hover:text-blue-800  '>Reddit(ミーム)</a><br />
+              <a href="https://www.reddit.com/r/dankmemes/" className='text-blue-500  hover:text-blue-800  '>Reddit(ダークミーム)</a><br />
+
+            </div>
+          </div>
+
+        </section>
+
+
+      </div>
+
+
     </div>
   );
 }
