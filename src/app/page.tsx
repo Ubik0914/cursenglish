@@ -29,7 +29,7 @@ export default function Home() {
         </section>
 
         {/* 特徴 */}
-        <section className="max-w-4xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <section className=" mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
             <h2 className="text-xl font-semibold mb-2">英語原文＆日本語訳</h2>
             <p>1行ごとに日本語ルビが振ってあるので読みやすい😬</p>
@@ -54,7 +54,7 @@ export default function Home() {
         <section className='flex justify-center'>
           <div>
 
-            <div className='w-2xl bg-gray-100 h-fit text-center py-2 '>
+            <div className=' bg-gray-100 h-fit text-center py-2 '>
               <h2 className='text-xl font-semibold my-2'>おすすめサイト</h2>
               <a href="https://www.4chan.org/" className='text-blue-500  hover:text-blue-800  '>4Chan(すべての元凶)</a><br />
               <a href="https://knowyourmeme.com/" className='text-blue-500  hover:text-blue-800  '>Know Your Meme</a><br />

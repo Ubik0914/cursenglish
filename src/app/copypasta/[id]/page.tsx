@@ -48,7 +48,17 @@ export default function CopypastaDetailPage({ params }: Props) {
     }, [id]);
 
     if (!articleData) {
-        return <div>Loading...</div>;
+        return (
+            <div className='h-[50vh] flex items-center justify-center' >
+                <div className='text-center font-bold text-2xl'>
+                    <img src="/images/dog.png"
+                        className='h-40 animate-pulse'
+                        alt="doge" />
+                    <p>Now Loading...</p>
+                </div>
+            </div >
+
+        );
     }
 
     return (
