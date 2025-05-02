@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div>
 
-      <div className="min-h-screen bg-white text-gray-800">
+      <div className="min-h-screen  ">
         {/* ヒーロー */}
-        <section className="bg-gray-100 py-20 text-center">
+        <section className="bg-gray-900 py-20 text-center">
           <div className='mb-4'>
             <h1 className="text-4xl font-bold ">💀CursEnglish💀</h1>
             <div className='-mt-1'>
-              <small className='text-gray-500'>Cursed×English</small>
+              <small className=''>Cursed×English</small>
             </div>
           </div>
           <p className="text-lg mx-auto">
@@ -23,7 +23,7 @@ export default function Home() {
           </p>
 
           {/* CTA */}
-          <Link href="/copypasta" className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+          <Link href="/copypasta" className="mt-4 inline-block bg-blue-600  px-6 py-3 rounded-lg hover:bg-blue-700">
             コピペ一覧
           </Link>
         </section>
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-xl font-semibold mb-2">単語・スラング解説</h2>
-            <p>FワードやSワードだけ煽りを身に着けよう🤏🏻</p>
+            <p>FワードやSワード以外の煽りを身に着けられる🤏🏻</p>
           </div>
           <div>
             <h2 className="text-xl font-semibold mb-2">らくらく投稿卍</h2>
@@ -51,11 +51,12 @@ export default function Home() {
           </Link>
         </section>
 
-        <section className='flex justify-center'>
-          <div>
+        <section className='flex justify-center '>
+          <div className='w-full'>
 
-            <div className='w-full bg-gray-100 h-fit text-center py-2 '>
+            <div className=' bg-gray-900 h-fit text-center py-2 '>
               <h2 className='text-xl font-semibold my-2'>おすすめサイト</h2>
+              <a href="https://inipponjp.blogspot.com/" className='text-blue-500  hover:text-blue-800  '>英語ネットスラング備忘録blogさん</a><br />
               <a href="https://www.4chan.org/" className='text-blue-500  hover:text-blue-800  '>4Chan(すべての元凶)</a><br />
               <a href="https://knowyourmeme.com/" className='text-blue-500  hover:text-blue-800  '>Know Your Meme</a><br />
               <a href="https://www.reddit.com/r/memes/" className='text-blue-500  hover:text-blue-800  '>Reddit(ミーム)</a><br />

@@ -4,14 +4,15 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-100 text-gray-600 mt-10">
+        <footer className="bg-gray-900 mt-10">
             <div className="max-w-5xl mx-auto py-10 px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
                 <div>
                     <h4 className="font-semibold mb-2">サービス</h4>
                     <ul className="space-y-1">
                         <li><Link href="/">ホーム</Link></li>
                         <li><Link href="/about">このサービスについて</Link></li>
-                        <li><Link href="/copypastas">コピペ一覧</Link></li>
+                        <li><Link href="/copypasta">コピペ一覧</Link></li>
+                        <li><Link href="/">猫ミーム図鑑</Link></li>
                     </ul>
                 </div>
                 <div>
@@ -19,6 +20,7 @@ export default function Footer() {
                     <ul className="space-y-1">
                         <li><Link href="/faq">よくある質問</Link></li>
                         <li><Link href="/contact">お問い合わせ</Link></li>
+                        <li><Link href="/admin-profile">管理人について</Link></li>
                     </ul>
                 </div>
                 <div>
@@ -31,8 +33,7 @@ export default function Footer() {
                 <div>
                     <h4 className="font-semibold mb-2">SNS</h4>
                     <ul className="space-y-1">
-                        <li><a href="https://twitter.com" target="_blank">X（旧Twitter）</a></li>
-                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://x.com/zakomushoku" target="_blank">管理人のTwitter</a></li>
                     </ul>
                 </div>
             </div>

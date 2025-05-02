@@ -46,11 +46,11 @@ export default function Home() {
 
             <div className="space-y-6">
                 {items.map(item => (
-                    <div key={item.id} className="p-4 border rounded bg-white shadow h-20">
+                    <div key={item.id} className="p-4 border rounded  shadow h-20">
                         <Link href={`copypasta/${item.id}`}>
 
                             <h2 className="text-xl font-semibold">{item.title}</h2>
-                            <p className="text-base text-gray-400 line-clamp-1">{item.explanation}</p>
+                            <p className="text-base  line-clamp-1">{item.explanation}</p>
                         </Link>
                     </div>
                 ))}

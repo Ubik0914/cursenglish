@@ -67,16 +67,16 @@ export default function CopypastaDetailPage({ params }: Props) {
 
             <h1 className="text-3xl font-bold mb-6">{articleData.title}</h1>
 
-            <div className="p-4 bg-gray-100 h-90 overflow-y-scroll">
+            <section className="p-4 bg-gray-900 h-90 overflow-y-scroll">
                 {articleData.lines.map((line: [string, string], idx: number) => (
                     <div key={idx} className="py-2 rounded">
                         <p className="font-semibold">{line[0]}</p>
-                        <p className={`${isJapaneseVisible ? "" : "hidden"} text-gray-600`}>
+                        <p className={`${isJapaneseVisible ? "" : "hidden"} `}>
                             {line[1]}
                         </p>
                     </div>
                 ))}
-            </div>
+            </section>
             <div className='text-end'>
 
                 <button onClick={() => { setIsJapaneseVisible(!isJapaneseVisible) }}>{isJapaneseVisible ? "日本語を隠す" : "日本語を表示"}</button>
@@ -84,10 +84,43 @@ export default function CopypastaDetailPage({ params }: Props) {
 
             {articleData.explanation && (
                 <section className="mt-8">
-                    <h2 className="text-2xl font-bold mb-2">解説</h2>
-                    <p className="text-gray-700">{articleData.explanation}</p>
+                    <h2 className="text-2xl font-bold mb-2">元ネタ解説</h2>
+                    <p className="">{articleData.explanation}</p>
                 </section>
             )}
+
+            <section className="mt-8">
+                <h2 className="text-2xl font-bold mb-2">文法解説</h2>
+                <p className=""></p>
+
+                {articleData.lines.map((line: [string, string], idx: number) => (
+                    <div key={idx} className="py-2 rounded">
+                        <div
+                            className='my-2 italic'
+                        >
+
+                            <p className={`${isJapaneseVisible ? "" : "hidden"}  `}>
+                                {line[0]}
+                            </p>
+                            <div
+                                className='-mt-2 '>
+
+                                <small>
+                                    {line[1]}
+                                </small>
+                            </div>
+                        </div>
+
+                        <div className='border-l-2 pl-1'>
+
+                            <p className={`${isJapaneseVisible ? "" : "hidden"} `}>
+                                ここに解説を表示する。。
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </section>
+
 
             <div className="mt-8 text-center">
                 <Link href="/copypasta" className="text-blue-500 hover:text-blue-700">
